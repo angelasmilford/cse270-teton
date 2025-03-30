@@ -2,7 +2,7 @@ import requests
 import pytest
 
 def test_authentication_failed(mocker):
-    url = 'http://127.0.0.1:5000/users'
+    url = 'http://127.0.0.1:8000/users'
     params = {
         'username': 'admin',
         'password': 'admin'
@@ -20,7 +20,7 @@ def test_authentication_failed(mocker):
     assert response.text.strip() == ''
 
 def test_authentication_successful(mocker):
-    url = 'http://127.0.0.1:5000/users'
+    url = 'http://127.0.0.1:8000/users'
     params = {
         'username': 'admin',
         'password': 'qwerty'
